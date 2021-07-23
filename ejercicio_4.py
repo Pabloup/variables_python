@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -9,19 +9,34 @@
 
 # Ejemplos variables de texto
 
-# Ingrese tres palabras y arme un acrónimo con ellas
-# Si desea puede modificar el código para ingresar más palabras
-print('Ingrese palabra 1:')
-palabra_1 = str(input())
+texto_1 = '5'
+texto_2 = '7'
 
-print('Ingrese palabra 2:')
-palabra_2 = str(input())
+# Verifique cual cual de los dos textos es mayor alfabéticamente
+# Imprima en pantalla según corresponda
+if texto_1 < texto_2:
+    print("el primer texto es mayor")
+else:
+    print("el segundo texto es mayor")
+# Transforma esas variables tipo texto y almacénalas
+# en nuevas variables númericas (int)
+texto_1 = int(input())
 
-print('Ingrese palabra 3:')
-palabra_3 = str(input())
+texto_2 = int(input())
 
-# De cada palabra debe tomar la primera letra y armar el acrónimo
-# Ejemplo: Alumbrado, barrido y limpieza --> ABL
-# Imprimir el resultado en pantalla
-anacronismo = palabra_1[0] + palabra_2[0] + palabra_3[0]
-print(anacronismo)
+if texto_1 > texto_2:
+    print("la primera palabra es mayor")
+else:
+    print("la egunda palabra es mayor")
+
+# Repita el proceso, ¿Cuál de las nuevas variables es mayor?
+# Imprima en pantalla según corresponda
+
+# Para pensar!
+# ¿Por qué cree que texto_2 es mayor a texto_1?
+# Siendo números tiene sentido, pero son caracteres, texto,
+# aún así el operador arroja el mismo resultado que con las
+# variables numéricas, cierto? ¿Por qué creen que es así?
+# Esta pregunta estará repetida en el Campus para que puedan
+# responder.
+# NOTA: La respuesta no se encuentra en el apunte, sino en Google ;)

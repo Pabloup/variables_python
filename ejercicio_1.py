@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de práctica
 
 # Autor: Inove Coding School
@@ -9,18 +9,43 @@
 
 # Ejercicios de práctica numérica
 
-numero_1 = 5
-numero_2 = 7
+# Comparadores
+# Ingrese dos números cualesquiera y realice las sigueintes
+# comparaciones entre ellos
+numero_1 = int(input('Ingrese el primer número:\n'))
 
-# Realizar la suma de las dos variables
-# numero_1 y numero_2
-# Almacenar el valor de la suma en una variable
-# ej:
-# operacion = .....
-operacion = numero_1 + numero_2
-# Imprimir en pantalla el resultado de la suma
-# print(....)
-print("el resultado de la suma es", operacion)
-# Repita el procedimiento para realizar la resta
-resta = numero_1 - numero_2
-print("el resultado de la resta es" , resta)
+numero_2 = int(input('Ingrese el segundo número:\n'))
+
+# Compare cual de los dos números es mayor
+if numero_1 > numero_2:
+    print("el primero es mayor al segundo")
+else:
+    print("el segundo es mayor al primero")   
+
+# Imprima en pantalla según corresponda
+
+# Verifique si el numero_1 positivo, negativo o cero
+# Imprima el resultado en cada caso
+if numero_1 > 0:
+    print("el primer numero es positivo")
+elif numero_1 < 0:
+    print("el primer numero es negativo")
+else:
+    print("el primer numero es igual a 0")
+
+
+# Verifique si el numero_1 es mayor a 0 y menor a 100
+# Imprima en pantalla si se cumple o no la condición
+if numero_1 > 0 and numero_1 < 100:
+    print("el primer numero esta entre 0 y 100")
+else:
+    print("el primer numero no esta entre 0 y 100")
+
+
+# Verifique si el numero_1 es menor a 10 o el numero_2
+# es mayor a -2
+# Imprima en pantalla si se cumple o no la condición
+if numero_1 < 10 or numero_2 > -2:
+    print("se cumple una de las dos condiciones")
+else:
+    print("no se cumple alguna de las ds condiciones")
