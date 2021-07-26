@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,39 +12,42 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica con cadenas
+# Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un programa que reciba por consola su nombre completo
-e imprima en pantalla su nombre en los siguientes formatos:
-- Todas las letras en minúsculas
-- Todas las letras en mayúsculas
-- Solo la primera letra del nombre en mayúscula
+Realice un programa que solicite ingresar tres valores de temperatura
+De las temperaturas ingresadas por consola determinar:
+1 - ¿Cuáles de ellas es la máxima temperatura ingresada?
+2 - ¿Cuáles de ellas es la mínima temperatura ingresada?
+3 - ¿Cuál es el promedio de las temperaturas ingresadas?
 
-NOTA: Para realizar este ejercicio deberá usar los siguientes métodos
-de strings:
-- lower
-- upper
-- capitalize
-
-Puede buscar en internet como usar en Python estos métodos.
-Les dejamos el siguiente link que posee casos de uso de algunos de ellos:
-
-Link de referencia:
-https://www.geeksforgeeks.org/isupper-islower-lower-upper-python-applications/
-
-Cualquier duda con estos métodos pueden consultarla por el campus
+En cada caso imprimir en pantalla el resultado
 '''
 
-print('Ahora si! buena suerte')
+print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
+print("en este ejercicio veremos estimaciones con temperaturas")
+print("ingrese 3 valores de temperatura a pedido del sistemas")
+print("ingrese el primer valor de temperatura")
 
-print("nombre completo")
-nombre = str(input())
-print("nombre completo:" , nombre)
+valor_1 = int(input())
+print("ingrese el segundo valor de temperatura")
+valor_2 = int(input())
+print("ingrese el tercero")
+valor_3 = int(input())
 
-print("nombre completo en minuscula:" , nombre.lower())
+if valor_1 > (valor_2 and valor_3):
+    print("el primer valor es el mas alto")
+elif valor_2 > (valor_1 and valor_3):
+    print("el segundo valor es el mas alto")
+else:
+    print("el tercer valor es el mas alto")
 
-print("nombre completo en mayuscula" , nombre.upper())
+if valor_1 < (valor_2 and valor_3):
+    print("el primer valor es la temperatura mas baja")
+elif valor_2 < (valor_1 and valor_3):
+    print("el segundo valor es la temperatura mas baja")
+else:
+    print("el tercer valor es la temperatura mas baja")
 
-print("primera letra del nombre en mayuscula" , nombre.capitalize())
+print("el promedio de las temperaturas ingresadas es de" , (valor_1 + valor_2 + valor_3) / 3)

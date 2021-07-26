@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,60 +12,69 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica numérica y cadenas
+# Ejercicios de práctica con texto
 '''
 Enunciado:
-Realice un programa que determine cual sería el apellido de una persona
-al ingresara los dos nombres completos de sus padres.
-En definitiva se solicita crear una variable nueva que reuna
-los apellidos.
+Realice un programa que solicite por consola 3 palabras cualesquiera
+Luego el programa debe consultar al usuario como quiere ordenar las palabras
+1 - Ordenar por orden alfabético (usando el operador ">")
+2 - Ordenar por cantidad de letras (longitud de la palabra)
 
-- Primero el programa debe consultar el nombre completo del padre_1
-- Luego el programa debe consultar el nombre completo del padre_2
-- Luego debe consultar el nombre del hijo/a
-- Debe extraer los apellidos de los padres (ver la nota al final)
-- Luego formar el nombre completo del hijo/a utilizando los apellidos
-  de sus padres y el nombre ingresado de dicha persona
-- Imprimir en pantalla el resultado
+Si se ingresa "1" por consola se deben ordenar las 3 palabras por orden alfabético
+e imprimir en pantalla de la mayor a la menor
 
-NOTA: Para extraer el apellido del nombre completo recomendamos usar
-el método "split"
-Mostraremos un ejemplo:
-
-direccion_completa = 'Monroe 2716'
-calle, altura = direccion_completa.split(' ')
-
-Les dejo por su cuenta a que busquen un poco más acerca de este método
-que seguramente utilizarán mucho de acá en adelante.
-Les dejamos un link con algunos ejemplos más:
-https://www.pythonforbeginners.com/dictionary/python-split
-
-Cualquier duda con el método split pueden consultarla por el campus
+Si se ingresa "2" por consola se deben ordenar las 3 palabras por cantidad de letras
+e imprimir en pantalla de la mayor a la menor
 '''
 
-print('Jugando con texto')
+print('Ejercicios de práctica con cadenas')
 # Empezar aquí la resolución del ejercicio
+print("ingrese 3 palabras a pedido del sistema, y seran ordenadas alfabeticamente")
 
-print("nombre completo del padre_1")
-padre_1 = str(input())
-print("nombre completo del padre 1" , padre_1)
+print("ingrese la primera palabra")
+palabra_1 = str(input())
+print("ingrese la segunda palabra")
+palabra_2 = str(input())
+print("ingrese la tercer palabra")
+palabra_3 = str(input())
 
-print("nombre completo del padre_2")
-padre_2 = str(input())
-print("nombre completo del padre 2" , padre_2)
+if (palabra_1 > palabra_2) and (palabra_1 > palabra_3) and (palabra_2 > palabra_3):
+    print("el orden es:" , palabra_1 , palabra_2 , palabra_3)
 
-print("nombre del hijo")
-hijo = str(input())
-print("nombre del hijo" , hijo)
+elif (palabra_1 > palabra_2) and (palabra_1 > palabra_3) and (palabra_3 > palabra_2):
+    print("el orden es:" , palabra_2 , palabra_1 , palabra_3)
 
-padre_1 = "marcelo gonzalez"
-nombre, apellido1 = padre_1.split()
-print("apellido del padre_1" , apellido1)
+elif (palabra_2 > palabra_1) and (palabra_2 > palabra_3) and (palabra_1 > palabra_3):
+    print("el orden es:" , palabra_2 , palabra_1 , palabra_3)
 
-padre_2 = "romina gomez"
-nombre, apellido2 = padre_2.split()
-print("apellido del padre 2" , apellido2)
+elif (palabra_2 > palabra_1) and (palabra_2 > palabra_3) and (palabra_3 > palabra_1):
+    print("el orden es:" , palabra_2 , palabra_3 , palabra_1)
 
-print("nombre del hijo con apellido de los dos padres")
-nombre_completo = hijo + " " + apellido1 + " " + apellido2
-print("nombre del hijo con el apellido de los dos padres" , nombre_completo)
+elif(palabra_3 > palabra_1) and (palabra_3 > palabra_2) and (palabra_1 > palabra_2):
+    print("el orden es:" , palabra_3 , palabra_1 , palabra_2)
+
+else:
+    print("el orden es:" , palabra_3 , palabra_2 , palabra_1)
+
+
+
+if len(palabra_1) > len(palabra_2) and len(palabra_1) > len(palabra_3) and len(palabra_2) > len(palabra_3):
+    print("el orden es:" , palabra_1 , palabra_2 , palabra_3)
+
+elif len(palabra_1) > len(palabra_2) and len(palabra_1) > len(palabra_3) and len(palabra_3) > len(palabra_2):
+    print("el orden es:" , palabra_1 , palabra_3 , palabra_2)
+
+elif len(palabra_2) > len(palabra_1) and len(palabra_2) > len(palabra_3) and len(palabra_1) > len(palabra_3):
+    print("el orden es:" , palabra_2 , palabra_1 , palabra_3)
+
+elif len(palabra_2) > len(palabra_1) and len(palabra_2) > len(palabra_3) and len(palabra_3) > len(palabra_1):
+    print("el orden es:" , palabra_2 , palabra_3 , palabra_1)
+
+elif len(palabra_3) > len(palabra_2) and len(palabra_3) > len(palabra_1) and len(palabra_1) > len(palabra_2):
+    print("el orden es:" , palabra_3 , palabra_1 , palabra_2)
+
+else:
+    print("el orden es:" , palabra_3 , palabra_2 , palabra_1)
+    
+
+

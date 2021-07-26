@@ -1,4 +1,4 @@
-# Tipos de variables [Python]
+# Condicionales [Python]
 # Ejercicios de profundización
 
 # Autor: Inove Coding School
@@ -12,46 +12,38 @@
 
 # IMPORTANTE: NO borrar los comentarios en VERDE o NARANJA
 
-# Ejercicios de práctica numérica y cadenas
+# Ejercicios de práctica con números
 '''
 Enunciado:
-Realice un programa que consulte por consola:
-- El nombre completo de la persona
-- El DNI de la persona
-- La edad de la persona
-- La altura de la persona
-
-Finalmente el programa debe imprimir dos líneas de texto por separado
-- En una línea imprimir el nombre completo y el DNI, aclarando de que
-  campo se trata cada uno
-        Ej: Nombre Completo: Nombre Apellido , DNI:35205070,
-- En la segunda línea se debe imprimir el nombre completo, edad y
-  altura de la persona
-  Nuevamente debe aclarar el campo de cada uno, para el que lo lea
-  entienda de que se está hablando.
+Realice un programa que solicite el ingreso de tres números
+enteros, y luego en cada caso informe si el número es par
+o impar.
+Para cada caso imprimir el resultado en pantalla.
 '''
 
-print('Sistema de ingreso de datos')
+print('Ejercicios de práctica con números')
 # Empezar aquí la resolución del ejercicio
+print("a continuacion ingrese 3 numeros y podra ver si cada uno es par o impar")
+print("ingrese un numero")
+numero_1 = int(input())
+print("ingrese el segundo numero")
+numero_2 = int(input())
+print("ingrese el tercer numero")
+numero_3 = int(input())
 
-print("nombre completo")
-nombre = str(input())
-print("nombre ingresado" , nombre) 
+if (numero_1 % 2) == 0:
+    print("el primer numero es par")
+else:
+    print("el primer numero es impar")
 
-print("DNI")
-DNI = str(input())
-print("DNI ingresado" , DNI)
+if (numero_2 % 2) == 0:
+    print("el segundo numero es par")
+else:
+    print("el segundo numero es impar")
 
-print("Edad")
-Edad = int(input())
-print("Edad ingresada" , Edad)
+if (numero_3 % 2) == 0:
+    print("el tercer numero es par")
+else:
+    print("el tercer numero es impar")
 
-print("altura")
-Altura = float(input())
-print("Altura ingresada" , Altura)
-
-print("Nombre completo y DNI")
-print("Nombre Completo" , nombre , "DNI" , DNI)
-
-print("nombre completo, edad y altura")
-print("Nombre completo" , nombre , "Edad" , Edad , "Altura" , Altura)
+print("espero les haya servido, muchas gracias..!")
